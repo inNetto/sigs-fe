@@ -4,7 +4,7 @@ import routes from './routes'
 
 
 export default route(function ({ store, ssrContext }) {
-  const createHistory = process.env.MODE === 'ssr'
+  const createHistory = process.env.SERVER
     ? createMemoryHistory
     : process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory
 
@@ -22,7 +22,7 @@ export default route(function ({ store, ssrContext }) {
     if (to.matched.some(record => record.meta.requireLogin) && !auth.isAuthenticated) {
       next({
         name: 'LoginIn',
-        query: { to: to.path }
+        query: { to: 'to.path' }
       })
     } else next()
   }) 

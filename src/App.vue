@@ -2,11 +2,13 @@
   <router-view />
 </template>
 <script>
+
 import { defineComponent } from 'vue';
+import { api } from 'boot/axios'
 
 export default defineComponent({
   name: 'App',
-  beforeCreate () {
+  /* beforeCreate () {
     this.$store.dispatch('auth/init')
     const token = this.$store.getters.getToken
     if (token) {
@@ -14,6 +16,6 @@ export default defineComponent({
     } else {
       api.defaults.headers.common.Authorization = ''
     }
-  }
+  } */
 })
 </script>
