@@ -1,0 +1,16 @@
+producao:
+  scheme: ftp
+  host: sigs-ong-br.umbler.net
+  port: 21
+  user: sigs-ong-br
+  pass: nemu2016
+  check: true
+  path:
+    local: dist/
+    remote: public/html
+  include:
+    "dist/*": ""
+    "dist/fonts/*": "fonts"
+    "dist/img/*": "img"
+    "dist/js/*": "js"
+    "dist/statics/*": "statics"
